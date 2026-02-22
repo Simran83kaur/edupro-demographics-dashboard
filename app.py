@@ -13,7 +13,6 @@ def load_data():
 
 users, courses, transactions = load_data()
 
-
 # Merge
 merged = transactions.merge(users, on="UserID").merge(courses, on="CourseID")
 
