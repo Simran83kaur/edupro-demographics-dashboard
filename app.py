@@ -4,11 +4,16 @@ import pandas as pd
 st.set_page_config(page_title="EduPro Dashboard", layout="wide")
 
 # Load Data
+@st.cache_data
+def LoadData():
 file = "data/EduPro Online Platform.xlsx"
 
 users = pd.read_excel(file, sheet_name="Users")
 courses = pd.read_excel(file, sheet_name="Courses")
 transactions = pd.read_excel(file, sheet_name="Transactions")
+    return users, courses, transactions
+
+users,courses, transactions = LoadData()
 
 # Merge
 merged = transactions.merge(users, on="UserID").merge(courses, on="CourseID")
