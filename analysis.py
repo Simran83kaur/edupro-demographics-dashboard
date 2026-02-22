@@ -4,9 +4,9 @@ import pandas as pd
 file = "data/EduPro Online Platform.xlsx"
 
 # Load sheets
-users = pd.read_excel(file, sheet_name="Users")
-courses = pd.read_excel(file, sheet_name="Courses")
-transactions = pd.read_excel(file, sheet_name="Transactions")
+users = pd.read_excel(file,sheet_name="Users",engine="openpyxl")
+courses = pd.read_excel(file, sheet_name="Courses",engine="openpyxl" )
+transactions = pd.read_excel(file, sheet_name="Transactions",engine="openpyxl")
 
 # Check shape (rows, columns)
 print("Users Shape:", users.shape)
