@@ -63,5 +63,3 @@ The datasets were merged using UserID and CourseID to create a unified analytica
 - Matplotlib
 - Seaborn
 - Plotly
-
-## Project Structure
